@@ -9,6 +9,7 @@ class RoomsController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:user_id])
     @room = Room.find(params[:id])
   end
 
@@ -20,6 +21,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @room = Room.find(params[:id])
   end
 
   def create
