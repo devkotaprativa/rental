@@ -1,2 +1,22 @@
-<h1>Rentals#index</h1>
-<p>Find me in app/views/rentals/index.html.erb</p>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Rent</a>
+        <%=image_tag("rent.jpeg", :class=>"img-circle", :width=> "50px", :height=> "50px")%> 
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><span class = "signup"> 
+            <%= link_to "Sign Up",  new_user_registration_path %> </span></li> 
+          <li><span class ="signup"><%= link_to "Login",  new_user_session_path %></span></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class= "container-fluid-home">
+    
+  </div>

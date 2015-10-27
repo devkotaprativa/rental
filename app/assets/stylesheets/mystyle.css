@@ -1,0 +1,15 @@
+.navbar-inverse{
+	background: transparent;
+	/*opacity: .60;*/
+}
+
+.signup{
+	color: #1BC3BD;
+	padding: 8px;
+}
+ .container-fluid-home{
+ 	background-image: url("apartment.png");
+ 	background-size: cover;
+	min-height: 700px;
+	margin-top: -30px;
+ }
