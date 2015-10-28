@@ -16,43 +16,4 @@
     </div>
   </div>
 </nav>
- 
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create New Room</h4>
-      </div>
-      <div class="modal-body">
-        <%= form_for [ @user, @new_room ] do |f| %>
-          <ul>
-            <% @new_room.errors.full_messages.each do |error| %>
-            <li><%= error %></li>
-            <% end %>
-          </ul>
-          <p>
-            <%= f.label :title %><br/>
-            <%= f.text_field :title %>
-          </p>
-          <p>
-            <%= f.label :description %><br/>
-            <%= f.text_area :description %>
-          </p>  
-          <p>
-            <%= f.label :price %><br/>
-            <%= f.text_field :price %>
-          </p>  
-          <p>
-            <%= f.submit %>
-          </p>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
+<%= render partial: 'form'%> 

@@ -24,7 +24,8 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @room = Room.find(params[:id])
+    @new_room = Room.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def create
