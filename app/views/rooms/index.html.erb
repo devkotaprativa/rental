@@ -1,15 +1,37 @@
 <%= render partial: 'header' %>
-<div class = "container">
-	<div class = "row" >
-		
-			<h2> Available Rooms </h2>
-			<% @rooms.each do |r| %>
-			<div class = "col-sm-4" >
-		<h3><%= link_to r.title, user_room_path(r.user_id, r.id) %></h3> <br>
-		<%= r.price %>
-		</div>
-	<% end %>
+<h2> Available Rooms </h2>
+<div class="row">
+<% @rooms.each do |r| %>
 
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    	
+			<%= image_tag r.image.url(:medium) %>
+			<div class="caption">
+			<h3><%= r.title %></h3> <br>
+				 Rate : <%= r.price %>
+			<p><%= link_to "View Details", user_room_path(r.user_id, r.id), class: "btn btn-primary", role: "button" %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
-</div>
+		
+
+      
+      
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
 

@@ -26,6 +26,10 @@
  	padding: 15px;
  	color: white;
  }
+
+ .thumbnail .caption{
+ 	text-align: center;
+ }
  
 
 

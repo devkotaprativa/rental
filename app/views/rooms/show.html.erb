@@ -1,11 +1,16 @@
 <%= render partial: 'header' %>
 <div class = "container">
-	<div class = "jumbotron">
-	<h1><%= @new_room.title %></h1>
-	<p><%= @new_room.description %></p>
-	<p><%= @new_room.price %></p>
-	<%= link_to "DELETE", user_room_path(@new_room.user_id,@new_room),  class: "btn btn-primary", method: :delete, data: {confirm: "Really delete the post?"} %>
-	<%= link_to "EDIT", edit_user_room_path(@new_room.user_id, @new_room.id), :type=>"button", :class=> "btn btn-primary", data: {toggle: "modal", target: "#myModal"} %>
-</div>
+	
+		<div class = "col-sm-4">
+			<h1><%= @new_room.title %></h1>
+			<p><%= @new_room.description %></p>
+			<p><%= @new_room.price %></p>
+			<%= link_to "DELETE", user_room_path(@new_room.user_id,@new_room),  class: "btn btn-primary", method: :delete, data: {confirm: "Really delete the post?"} %>
+			<%= link_to "EDIT", edit_user_room_path(@new_room.user_id, @new_room.id), :type=>"button", :class=> "btn btn-primary", data: {toggle: "modal", target: "#myModal"} %>
+		</div>
+		<div class = "col-sm-8">
+			<%= image_tag @new_room.image.url(:medium), class: "img-rounded" %>
+		</div>
+	
 </div>
 <%= render partial: 'form' %>
