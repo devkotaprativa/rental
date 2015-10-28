@@ -19,6 +19,9 @@ class RoomsController < ApplicationController
   def destroy
     @room = Room.find(params[:id])
     @room.destroy
+     # respond_to do |format|
+     #   format.js 
+     # end
     flash.notice = "Successfully Deleted"
     redirect_to user_rooms_path(current_user.id)
   end

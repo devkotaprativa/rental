@@ -16,3 +16,16 @@
  .jumbotron{
  	background-color: #C5E4EF;
  }
+ .col-sm-4{
+ 	outline: 1px solid #ECB248;
+ }
+ .navbar-nav > li{
+ 	margin-top: 2px;
+ }
+ .link{
+ 	padding: 15px;
+ 	color: white;
+ }
+ 
+
+

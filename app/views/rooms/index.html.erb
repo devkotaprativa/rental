@@ -4,7 +4,7 @@
 		
 			<h2> Available Rooms </h2>
 			<% @rooms.each do |r| %>
-			<div class = "col-sm-4">
+			<div class = "col-sm-4" >
 		<h3><%= link_to r.title, user_room_path(r.user_id, r.id) %></h3> <br>
 		<%= r.price %>
 		</div>

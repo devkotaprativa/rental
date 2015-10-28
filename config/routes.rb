@@ -9,11 +9,11 @@ Rails.application.routes.draw do
  
 
    devise_scope :user do
-  authenticated :user do
-    root :to => 'rooms#index'
-  end
-  unauthenticated :user do
-    root :to => 'rentals#index', as: :unauthenticated_root
+    authenticated :user do
+      root :to => 'rooms#index'
+    end
+    unauthenticated :user do
+      root :to => 'rentals#index', as: :unauthenticated_root
   end
 end
 
