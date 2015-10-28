@@ -2,6 +2,6 @@
 	<h1><%= @room.title %></h1>
 	<p><%= @room.description %></p>
 	<p><%= @room.price %></p>
-	<%= link_to "DELETE", user_room_path(@room, current_user.id), method: :delete, data: {confirm: "Really delete the post?"} %> <br>
-	<%= link_to "EDIT", edit_user_room_path(@room.user_id, @room.id) %>
+	<%= link_to "DELETE", user_room_path(@room, current_user.id),class: "btn btn-primary", method: :delete, data: {confirm: "Really delete the post?"} %>
+	<%= link_to "EDIT", edit_user_room_path(@room.user_id, @room.id), class: "btn btn-primary" %>
 </div>
