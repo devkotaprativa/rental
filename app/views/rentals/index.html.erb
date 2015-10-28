@@ -11,7 +11,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><span class = "signup"> 
-          <%= link_to "Sign Up",  new_user_registration_path %> </span></li> 
+          <%= link_to "Sign Up",  new_user_registration_path, 'data-toggle' => "modal", 'data-target' => "#signup", method: 'get' %> </span></li> 
         <li><span class ="signup"><%= link_to "Login",  new_user_session_path %></span></li>
       </ul>
     </div>
@@ -20,3 +20,4 @@
 <div class= "container-fluid-home">
   
 </div>
+
