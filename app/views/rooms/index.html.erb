@@ -1,20 +1,19 @@
 <%= render partial: 'header' %>
 <h2> Available Rooms </h2>
 <div class="row">
-<% @rooms.each_with_index do |r,i| %>
-
-  <div class="col-sm-6 col-md-4" style="<%= 'clear:both;' if i%3 == 0 %>">
-    <div class="thumbnail-index">
-    	
-			<%= image_tag r.image.url(:medium), class: "image"%>
-			<div class="caption">
-			<h3><%= r.title %></h3> <br>
-				 Rate : <%= r.price %>
-			<p><%= link_to "View Details", user_room_path(r.user_id, r.id), class: "btn btn-primary", role: "button" %></p>
+  <% @rooms.each_with_index do |r,i| %>
+    <div class="col-sm-6 col-md-4" style="<%= 'clear:both;' if i%3 == 0 %>">
+      <div class="thumbnail-index">
+      	
+  			<%= image_tag r.image.url(:medium), class: "image"%>
+  			<div class="caption">
+  			<h3><%= r.title %></h3> <br>
+  				 Rate : <%= r.price %>
+  			<p><%= link_to "View Details", user_room_path(r.user_id, r.id), class: "btn btn-primary", role: "button" %></p>
+        </div>
       </div>
     </div>
-  </div>
-  <% end %>
+    <% end %>
 </div>
 		
 

@@ -33,9 +33,9 @@ class RoomsController < ApplicationController
 
   def create
     @user = current_user
-    @room = Room.new(room_params)
-    @room.user_id = params[:user_id]
-    if @room.save
+    @new_room = Room.new(room_params)
+    @new_room.user_id = params[:user_id]
+    if @new_room.save
       flash[:msg] = "Successfully created"
       redirect_to user_rooms_path(current_user.id)
     else

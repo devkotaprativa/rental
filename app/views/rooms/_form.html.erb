@@ -15,19 +15,19 @@
           </ul>
           <p>
             <%= f.label :title %><br/>
-            <%= f.text_field :title %>
+            <%= f.text_field :title, :required => true%>
           </p>
           <p>
             <%= f.label :description %><br/>
-            <%= f.text_area :description %>
+            <%= f.text_area :description, :required => true %>
           </p>  
           <p>
             <%= f.label :price %><br/>
-            <%= f.text_field :price %>
+            <%= f.text_field :price, :required => true %>
           </p>  
            <p>
             <%= f.label :image %><br/>
-            <%= f.file_field :image %>
+            <%= f.file_field :image, :required => true %>
           </p>  
           <p>
             <%= f.submit %>
