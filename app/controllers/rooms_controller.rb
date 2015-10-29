@@ -33,9 +33,9 @@ class RoomsController < ApplicationController
 
   def create
     @user = current_user
-    @new_room = Room.new(room_params)
-    @new_room.user_id = params[:user_id]
-    if @new_room.save
+    @room = Room.new(room_params)
+    @room.user_id = params[:user_id]
+    if @room.save
       flash[:msg] = "Successfully created"
       redirect_to user_rooms_path(current_user.id)
     else
@@ -48,7 +48,7 @@ class RoomsController < ApplicationController
   def update
     @room = Room.find(params[:id])
     @room.update(room_params)
-    flash.notice = "Successfully #{@room.title} Updated !!"
+    flash[:msg]= "Successfully #{@room.title} Updated !!"
     redirect_to user_rooms_path(current_user.id)
   end
 
