@@ -1,9 +1,9 @@
 <%= render partial: 'header' %>
 <h2> Available Rooms </h2>
 <div class="row">
-<% @rooms.each do |r| %>
+<% @rooms.each_with_index do |r,i| %>
 
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4" style="<%= 'clear:both;' if i%3 == 0 %>">
     <div class="thumbnail-index">
     	
 			<%= image_tag r.image.url(:medium), class: "image"%>
