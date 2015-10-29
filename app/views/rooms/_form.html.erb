@@ -6,6 +6,7 @@
         <h4 class="modal-title"><strong>Room Details</strong></h4>
       </div>
       <div class="modal-body">
+        
         <%= form_for [ @user, @new_room ] do |f| %>
           <ul>
             <% @new_room.errors.full_messages.each do |error| %>

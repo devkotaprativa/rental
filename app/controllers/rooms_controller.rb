@@ -9,6 +9,9 @@ class RoomsController < ApplicationController
   def new
     @room = Room.new
     @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.js
+    end
   end
 
   def edit
@@ -29,10 +32,17 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new(room_params)
-    @room.user_id = params[:user_id]
-    @room.save
-    redirect_to user_rooms_path(current_user.id)
+    @user = current_user
+    @new_room = Room.new(room_params)
+    @new_room.user_id = params[:user_id]
+    if @new_room.save
+      flash[:msg] = "Successfully created"
+      redirect_to user_rooms_path(current_user.id)
+    else
+      flash[:msg] = "cannot create"
+      render  partial: 'form'
+    end
+
   end
 
   def update
