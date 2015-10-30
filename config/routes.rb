@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
 
+  get 'bookings/new'
+
+  get 'bookings/create'
+
+  get 'bookings/index'
+
+  get 'bookings/destroy'
+
+  get 'bookings/show'
+
   devise_for :users
   resources :users do
     resources :rooms
