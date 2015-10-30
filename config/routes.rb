@@ -1,23 +1,14 @@
 Rails.application.routes.draw do
 
-
-  get 'bookings/new'
-
-  get 'bookings/create'
-
-  get 'bookings/index'
-
-  get 'bookings/destroy'
-
-  get 'bookings/show'
-
   devise_for :users
   resources :users do
     resources :rooms
   end
   resources :rentals
+  resources :rooms do
+    resources :bookings
+  end
  
-
    devise_scope :user do
     authenticated :user do
       root :to => 'rooms#index'

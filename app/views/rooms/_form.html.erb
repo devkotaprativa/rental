@@ -18,6 +18,14 @@
             <%= f.text_field :title, :required => true%>
           </p>
           <p>
+            <%= f.label :location %><br/>
+            <%= f.text_field :location, :required => true%>
+          </p>
+          <p>
+            <%= f.label :available_rooms %><br/>
+            <%= f.text_field :available, :required => true%>
+          </p>
+          <p>
             <%= f.label :description %><br/>
             <%= f.text_area :description, :required => true %>
           </p>  
@@ -27,7 +35,7 @@
           </p>  
            <p>
             <%= f.label :image %><br/>
-            <%= f.file_field :image, :required => true %>
+            <%= f.file_field :image  %>
           </p>  
           <p>
             <%= f.submit %>
